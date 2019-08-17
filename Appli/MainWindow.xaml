@@ -5,6 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Appli"
         mc:Ignorable="d"
-        Title="My Window" Background="AntiqueWhite" Height="450" Width="800" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.InfoBrushKey}}">
-    <Grid/>
+        Title="My Window"  Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Row="1" Grid.Column="0" Fill="Bisque"/>
+        <Rectangle Grid.Row="2" Grid.Column="1" Fill="Bisque" Margin="10,20,10,20"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontWeight="Heavy" Background="Aqua" Padding="10">Hej</TextBlock>
+        <Button Margin="15" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1">Klikaj na mnie</Button>
+
+        <Grid Grid.Column="2" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" Grid.Row="0" >R0 C1</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="0" >R0 C0</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="0" >R0 C2</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="1" >R1 C2</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" >R1 C0</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="1" >R1 C1</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" >R2 C0</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="2" >R2 C1</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="2" >R2 C2</TextBlock>
+        </Grid>
+        
+    </Grid>
 </Window>
